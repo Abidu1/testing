@@ -1,0 +1,769 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight:400;
+}
+/* stripping styles */
+    body,
+    h1,
+    h2,
+    ul { 
+        margin: 0;
+        padding: 0;
+    }
+
+    ul { 
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: 100vh;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        font-size: 1.9rem; 
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    h2 {
+        font-size: 2.9rem;
+        text-align: center;
+    }
+
+    h3 { 
+        font-size:1.5rem;
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        font-size:1.3rem;
+
+    }
+
+/* header */
+    header {
+        position: absolute;
+        width: 100%;
+        background: #F6F8FA;
+
+    }
+
+    header .parent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hackeryoulogo{
+        width: 5%;
+    }
+
+    .header-nav li {
+        display: inline-block; 
+        
+
+    }
+
+    .header-nav a {
+        padding: 10px 20px;
+        font-family: "Raleway", sans-serif;
+        font-weight:700;
+        
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus {
+        background: white;
+        border-radius: 5px;
+        }
+
+
+    .mainsection {
+        background: url(./assets/image-1.jpg);
+        background-size: cover;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display:flex;
+        align-items: center;
+
+    }
+
+    .titlepage{
+        background:#F6F8FA;
+        padding: 20px;
+        opacity: .9;
+        width:70%;
+        
+    }
+    .titlepage h3{
+        font-size:40px;
+        position:relative;
+        top:20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .titlepagedate{
+        font-size:18px;
+        position:relative;
+        bottom:25px;
+        text-align: center;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+    }
+
+    .titlepagecontent{
+        font-size:17px;
+        position:relative;
+        bottom:35px;
+        padding-bottom:15px;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+    }
+
+
+    .titles{
+        margin-top:20px;
+        position:relative;
+        top:5px;
+
+    }
+/* first section */
+    .blog{
+        margin-top: 15px;
+
+    }
+
+    .titleblog{
+        position: relative;
+        top:20px;
+    }
+
+    .section1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top:10px;
+
+    }
+
+    .articletitle{
+        text-align: center;
+        font-size:1.5rem;
+        font-weight: 700;
+    }
+
+    .article1 img {
+        height:35vh;
+    }
+
+    .article1 {
+        margin:10px;
+    }
+
+    .aboutus{
+        margin-top:35px;
+    }
+
+    .sectionblog2{
+        display:flex;
+        justify-content: flex-start;
+    }
+
+    .sectionblog2 img{
+        height:75vh;
+    }
+
+    .articlepart2 img{
+        height:35vh;
+    }
+
+
+    .articlepart2 {
+        position:relative;
+        left: 40px;
+        bottom:20px;
+    }
+
+
+    .overlay {
+        background: #F6F8FA;
+        position:relative;
+        bottom:25px;
+        padding-top:5px;
+        padding-bottom: 10px;
+        /* display:flex;
+        flex-wrap:wrap; */
+        
+    }
+
+    .overlay h3{
+        font-family: "Raleway", sans-serif;
+        position:relative;
+        top:5px;
+        text-transform: uppercase;
+    }
+    
+    .RelatedPosts{
+        background:#F6F8FA;
+        padding:20px;
+    }
+
+/* second section */
+  .sectiontwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    }
+
+    .article2 img{
+        height:35vh;
+    }
+
+
+    .article2 {
+        margin:10px;
+    }
+
+
+    .article2 .overlay {
+        background: white; 
+    }
+
+    .dates{
+        font-size:13px;
+        position:relative;
+        bottom:10px;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+
+    }
+
+    .content{
+        font-size:13px;
+        text-align:left;
+        /* position:relative;
+        left:20px;
+        bottom:10px; */
+        padding-bottom:15px; 
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    .readmore{
+        color:red;
+        text-transform: uppercase;
+        font-size: 12px;
+        display:flex;
+        justify-content: center;
+        font-weight:800;
+        position:relative;
+        bottom:25px;
+
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+    color: black;
+    }
+
+/* this is the footer */
+
+    footer {
+        background-color:#404040;
+        color:white;
+    }
+
+    footer p {
+        line-height: 1.6;
+        font-family: "Raleway", sans-serif;
+    } 
+    .section3 {
+        display: flex;
+        padding: 60px 0;
+    }
+    
+    .logo,.newsletter {
+        width:45%;
+    
+    }
+    
+    .footernav{
+        margin-right:10px;
+    }
+    
+    .footernav a {
+        padding: 5px 20px;
+    }
+    
+    .footernav,
+    .logo,
+    .newsletter {
+       margin: 0 5px; 
+    }
+
+
+    .footernav{
+        margin-right:10px;
+        margin-top:5px;
+    }
+
+    .footernav a {
+        padding: 5px 20px;
+        font-size:15px;
+        font-weight:700;
+        color:white;
+    }
+
+    .footernav li{
+        display:flex;
+    }
+
+    .footernav a:hover,
+    .footernav a:focus {
+        background: black;
+        border-radius: 5px;
+        }
+
+    .footernav{
+        margin-top:5px;
+    }
+
+    .footertitles{
+        text-transform:uppercase;
+    }
+
+    .footercontent{
+        font-size:13px;
+        text-align:left;
+        position:relative;
+        bottom:10px;
+        padding-bottom:15px;
+        font-weight:500;
+
+    }
+/* ewsletter form */
+    button {
+        background:crimson;
+        color: white;
+        padding: 10px;
+        border: none;
+        width:30%;
+        text-transform: uppercase;
+        font-family: "Raleway", sans-serif;
+        font-weight:400;
+        }
+    input{
+            width:40%;
+            padding:5px;
+            font-family: 'Noto Serif', serif;
+            font-style: italic;
+
+        }
+    .subcribebutton{
+        position:relative;
+        bottom:35px;
+        left:80px;
+
+    }
+/* footer copyright */
+    .copyright{
+        background:	#202020;
+    }
+    .copyrightsection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .copyrightlogo{
+        font-size: 2 rem;
+        color:white;
+        text-transform: uppercase;
+        font-weight:800;
+    }
+
+    span {
+        margin-right: 5px;
+        color:white;
+    }
+
+
+
+/* Media Queries */
+@media (max-width: 935px){
+
+    .parent{
+        flex-direction: column;
+    }
+
+    .hackeryoulogo{
+        width:25%;
+        display:flex;
+        justify-content: center;
+    }
+
+    .titlepage{
+        margin-top:10px;
+    }
+
+    .titlepage h3{
+        font-size:35px;
+    }
+    .titlepagedate{
+        position:relative;
+        top: 1px;
+        font-size:16px;
+    }
+
+    .titlepagecontent{
+        position:relative;
+        top:1px;
+        font-size:18px;
+    }
+
+    .section1{
+        flex-direction: column;
+    }
+
+    .sectionblog2{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: center;
+        width:70%;
+        position:relative;
+        right:20px;
+
+    }
+
+    .articlepart2{
+        position: relative;
+        left: 120px;
+    }
+    .sectiontwo{
+        flex-direction:column;
+    }
+
+    .overlay{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .content,
+    .dates,
+    .readmore{
+        text-align: center;
+        font-size: 12px;
+        position:relative;
+        left:5px;
+    }
+
+    
+
+    .section3{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    /* \ */
+    }   
+
+
+
+@media (max-width: 748px) { 
+    .parent{
+        flex-direction: column;
+    }
+
+    .header-nav li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+
+    .hackeryoulogo{
+        width:25%;
+        display:flex;
+        justify-content: center;
+    }
+
+    .titlepage{
+        position:relative;
+        top:50px;
+    }
+    .titlepage h3{
+        font-size:30px;
+    }
+    .titlepagedate{
+        position:relative;
+        top: 1px;
+        font-size:15px;
+    }
+
+    .titlepagecontent{
+        position:relative;
+        top:1px;
+        font-size:15px;
+    }
+     .parent{
+        flex-direction: column;
+    }
+	 .header-nav {
+		flex-direction: column;
+	} */
+
+	.hackeryoulogo {
+        flex-direction:column;
+    }
+    
+    ul {
+		flex-direction: column;
+	}
+
+	ul li {
+		justify-content: center;
+    } 
+
+    .section1{
+        flex-direction: column;
+    }
+
+    .sectionblog2{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: center;
+        width:65%;
+        position:relative;
+        right:10px;
+
+    }
+
+    .articlepart2{
+        position: relative;
+        left: 120px;
+    }
+    .sectiontwo{
+        flex-direction:column;
+    }
+
+    .overlay{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .content,
+    .dates,
+    .readmore{
+        text-align: center;
+        font-size: 11px;
+        position:relative;
+        left:5px;
+    }
+
+    .section3{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: center;
+    } 
+
+    .finalsection{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+
+
+    .copyrightsection{
+        flex-direction:column;
+    }
+    
+    .copyrightlogo{
+        width:30%;
+        display:flex;
+        justify-content: center;
+    }
+    
+    .footernav li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+    
+    .socialmedia li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+    
+
+}
+
+
+@media(max-width: 414px) {
+
+    .parent{
+        flex-direction: column;
+    }
+
+    .header-nav li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+    .hackeryoulogo{
+        width:25%;
+        display:flex;
+        justify-content: center;
+    }
+
+    .header-nav {
+        display:flex;
+        justify-content: center;
+        flex-wrap:wrap;
+		flex-direction: column;
+	}
+
+	.hackeryoulogo {
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+
+    .titlepage{
+        position:relative;
+        top:70px;
+    }
+    
+	ul {
+		flex-direction: column;
+	}
+
+	ul li {
+        justify-content: center;
+    }
+    .section1{
+        flex-direction: column;
+    }
+
+    .sectionblog2{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: center;
+        width:50%; *
+        position:relative;
+        right:10px; 
+
+    } 
+
+    .articlepart2{
+        position: relative;
+        left: 120px;
+    }
+    .sectiontwo{
+        flex-direction:column;
+    }
+
+    .content,
+    .dates,
+    .readmore{
+        text-align: center;
+        font-size: 12px;
+        position:relative;
+        left:5px;
+    }
+
+    .finalsection{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+
+    
+    .section3{
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            flex-wrap:wrap;
+            align-items: center;
+        }
+
+    input{
+        width:40%;
+    }
+    button{
+            width:65%;
+        }  
+
+    .copyrightsection{
+        flex-direction:column;
+    }
+    
+    .copyrightlogo{
+        width:30%;
+        display:flex;
+        justify-content: center;
+    }
+    
+    .footernav li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+    
+    .socialmedia li{
+        display:flex;
+        justify-content: center;
+        flex-direction:column;
+        text-align: center;
+    }
+    
+
+}
+
+
+
